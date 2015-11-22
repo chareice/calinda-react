@@ -1,0 +1,22 @@
+.article-item{
+  margin-bottom: 40px;
+  height: 340px;
+  position: relative;
+  color: #414243;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.7;
+  header{
+    position: absolute;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+    box-shadow: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    background-image: -webkit-linear-gradient(top,rgba(0,0,0,.01) 40%,rgba(0,0,0,.7) 80%);
+    background-repeat: repeat-x;
+    width: 100%;
+    padding: 270px 22px 22px;
+  }
+}
