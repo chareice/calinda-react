@@ -3,6 +3,7 @@
 import React from 'react';
 
 require('styles//ArticleDetail.scss');
+let SiteFooter = require('./SiteFooterComponent')
 
 class ArticleDetailComponent extends React.Component {
   constructor(){
@@ -32,6 +33,7 @@ class ArticleDetailComponent extends React.Component {
           <h1 className="article-title">{this.state.article.title}</h1>
         </header>
         <section dangerouslySetInnerHTML={{__html: this.state.article.cooked}}></section>
+        <SiteFooter />
       </article>
     );
   }

@@ -7,7 +7,12 @@
   font-weight: 400;
   line-height: 1.7;
   header{
+    .articleTitle{
+      text-overflow: ellipsis;
+      overflow:hidden;
+    }
     position: absolute;
+    white-space: nowrap;
     color: #fff;
     a{
       color: #fff;

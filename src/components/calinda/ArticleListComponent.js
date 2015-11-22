@@ -5,6 +5,7 @@ import React from 'react';
 require('styles/calinda/ArticleList.scss');
 
 let Article = require('./ArticleComponent')
+let SiteFooter = require('../SiteFooterComponent')
 
 class ArticleListComponent extends React.Component {
   constructor(){
@@ -33,6 +34,7 @@ class ArticleListComponent extends React.Component {
     return (
       <div className="articlelist-component">
         {lists}
+        <SiteFooter />
       </div>
     );
   }

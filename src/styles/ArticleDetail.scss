@@ -9,7 +9,6 @@ article{
   section{
     margin: 20px 0;
     pre{
-      border: 1px solid #eaeaea;
       border-radius: 3px;
       display: block;
       line-height: 24px;
@@ -17,15 +16,14 @@ article{
       overflow-x: auto;
       padding: 12px;
       width: 100%;
-      background: #f8f8f8;
+      background: #f7f7f7;
       font-family: "Monaco", "Consolas", "Menlo", monospace;
       font-size: 14px;
     }
   }
   .paragraph{
     code{
-      border: 1px solid #eaeaea;
-      background-color: #f8f8f8;
+      background-color: #f7f7f7;
       padding: 1px 3px;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
