@@ -1,4 +1,5 @@
 article{
+  background-size: contain;
   .article-title{
     margin: 0;
     color: #414243;
@@ -20,6 +21,11 @@ article{
       font-family: "Monaco", "Consolas", "Menlo", monospace;
       font-size: 14px;
     }
+    .highlight{
+      code{
+        padding: 0;
+      }
+    }
   }
   .paragraph{
     code{
@@ -29,5 +35,10 @@ article{
       -moz-border-radius: 2px;
       border-radius: 2px;
     }
+  }
+}
+#toc{
+  ul{
+    list-style: none;
   }
 }

@@ -6,7 +6,6 @@ import createBrowserHistory from 'history/lib/createBrowserHistory'
 import App from './Main'
 import ArticleDetail from './ArticleDetailComponent'
 
-require('normalize.css');
 require('styles/App.scss');
 // Render the main component into the dom
 render((

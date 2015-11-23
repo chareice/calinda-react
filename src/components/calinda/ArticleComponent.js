@@ -8,7 +8,7 @@ require('styles/calinda/Article.scss');
 class ArticleComponent extends React.Component {
   render() {
     var headerStyle = {
-      backgroundImage: 'url(' + this.props.data.title_image + ')'
+      backgroundImage: 'url(' + this.props.data.title_image + '?imageView2/2/w/600)'
     }
     return (
       <article style={headerStyle} className="article-item">

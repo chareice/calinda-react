@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var _ = require('lodash');
 
 var baseConfig = require('./base');
+baseConfig.output.filename = 'app.js';
 
 var config = _.merge({
   entry: [
@@ -27,5 +28,5 @@ config.module.loaders.push({
   loader: 'react-hot!babel-loader',
   include: path.join(__dirname, '/../src')
 });
-
+console.log(config);
 module.exports = config;

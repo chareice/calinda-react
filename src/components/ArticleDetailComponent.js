@@ -15,7 +15,7 @@ class ArticleDetailComponent extends React.Component {
 
   componentDidMount() {
     var articleId = this.props.params.articleId;
-    fetch("http://www.paihe.io/api/articles/" + articleId)
+    fetch("https://paihe.123hxf.com/api/articles/" + articleId)
       .then((response) => {
           response.json().then((data) => {
             this.setState({

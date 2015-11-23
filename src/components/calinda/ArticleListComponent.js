@@ -16,7 +16,7 @@ class ArticleListComponent extends React.Component {
   }
 
   componentDidMount(){
-    fetch("http://www.paihe.io/api/users/5/articles")
+    fetch("https://paihe.123hxf.com/api/users/5/articles")
       .then((response) => {
           response.json().then((data) => {
             this.setState({

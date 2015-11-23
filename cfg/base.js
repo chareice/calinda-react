@@ -9,7 +9,7 @@ module.exports = {
   debug: true,
   output: {
     path: path.join(__dirname, '/../dist/assets'),
-    filename: 'app.js',
+    filename: '[hash]app.js',
     publicPath: publicPath
   },
   devServer: {

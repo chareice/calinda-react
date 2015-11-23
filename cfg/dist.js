@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var _ = require('lodash');
+var fs = require('fs');
 
 var baseConfig = require('./base');
 
@@ -16,7 +17,23 @@ var config = _.merge({
     new webpack.NoErrorsPlugin(),
     new webpack.ProvidePlugin({
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-    })
+    }),
+    function() {
+      this.plugin("done", function(stats) {
+        var hash = stats.hash;
+        var filename = path.join(__dirname, '../dist/', 'index.html');
+        fs.readFile(filename, 'utf8', function (err,data) {
+          if (err) {
+            return console.log(err);
+          }
+          var result = data.replace(/app\.js/g, hash + 'app.js');
+
+          fs.writeFile(filename, result, 'utf8', function (err) {
+             if (err) return console.log(err);
+          });
+        });
+      });
+    }
   ]
 }, baseConfig);
 
