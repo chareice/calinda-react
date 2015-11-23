@@ -9,6 +9,31 @@
 </head>
 <body>
   <div id="app" class="row"></div>
-  <script src="/assets/app.js"></script>
+  <script>
+    var hash = "",
+        key = hash + 'app.js',
+        url = '/assets/' + key,
+        content = localStorage.getItem(key),
+        setScriptTag = function(content){
+          var script_tag = document.createElement('script');
+          script_tag.type = 'text/javascript';
+          script_tag.text = content;
+          document.body.appendChild(script_tag);
+        };
+    if(!content){
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.addEventListener("load", function (evt) {
+        if (xhr.status === 200) {
+          var scriptContent = evt.target.responseText;
+          setScriptTag(scriptContent);
+          localStorage.setItem(key, scriptContent);
+        }
+      }, false);
+      xhr.send();
+    }else{
+      setScriptTag(content);
+    }
+  </script>
 </body>
 </html>

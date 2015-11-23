@@ -28,5 +28,4 @@ config.module.loaders.push({
   loader: 'react-hot!babel-loader',
   include: path.join(__dirname, '/../src')
 });
-console.log(config);
 module.exports = config;

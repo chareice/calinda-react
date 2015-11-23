@@ -4,6 +4,7 @@ var _ = require('lodash');
 var fs = require('fs');
 
 var baseConfig = require('./base');
+baseConfig.output.filename = '[hash]app.js';
 
 var config = _.merge({
   entry: path.join(__dirname, '../src/components/run'),
@@ -26,7 +27,7 @@ var config = _.merge({
           if (err) {
             return console.log(err);
           }
-          var result = data.replace(/app\.js/g, hash + 'app.js');
+          var result = data.replace(/var hash = ""/g, 'var hash = "'+ hash +'"');
 
           fs.writeFile(filename, result, 'utf8', function (err) {
              if (err) return console.log(err);
